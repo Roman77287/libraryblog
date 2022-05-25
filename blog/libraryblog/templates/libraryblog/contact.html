@@ -1,0 +1,19 @@
+{% extends 'libraryblog/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="banner-1">
+        <div class="container-1">
+            <h2> Форма для зв'язку</h2>
+            <form>
+                <label for="name">Ім'я</label>
+                <p><input type="text" id="name" name="name" placeholder="Введіть своє ім'я"></p>
+                <label for="address">Адреса</label>
+                <p><input type="text" id="address" name="address" placeholder="Введіть свою електронну адресу"></p>
+                <label for="message">Повідомлення</label>
+                <p><textarea name="message" id="message" cols="30" rows="10"
+                        placeholder="Введіть своє повідомлення"></textarea></p>
+                <p><input id="sumbit" type="submit" value="Відправити"></p>
+            </form>
+        </div>
+    </section>
+{% endblock %}

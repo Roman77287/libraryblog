@@ -1,0 +1,28 @@
+{% extends 'libraryblog/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="last-news">
+        <div class="news-title">
+            <h1>
+                Останні новини
+            </h1>
+        </div>
+        <div class="cards-news">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="cards-row">
+                {% for post in post_list %}
+                <div class="col">
+                    <div class="card" style="width: 500px;">
+                        <img src="{{ post.post_img.url }}" class="card-img-top" alt="..." style="height: 450px;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.post_title }}</h5>
+                            <p class="card-text">{{post.post_text }}</p>
+                            <a href="{% url 'post_detail' post.slug  %}"><button type="button" class="btn btn-outline-light">Читати далі</button></a>
+                            <p class="card-data">{{ post.created_on }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+        </div>     
+    </section>
+{% endblock %}

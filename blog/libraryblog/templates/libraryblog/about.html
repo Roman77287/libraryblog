@@ -1,0 +1,40 @@
+{% extends 'libraryblog/base.html' %}
+{% load static %}
+{% block content %}
+    <h3>Про нас</h3>
+<dl class="faq">
+  <dt>
+    <button type="button" aria-expanded="false" aria-controls="faq1_desc">Про що цей блог?</button>
+  </dt>
+  <dd>
+    <div id="faq1_desc" class="desc">
+      Цей блог був створений, щоб будь-хто міг почитати статті про книжки, авторів тд. та новини про книжки.
+    </div>
+  </dd>
+  <dt>
+    <button type="button" aria-expanded="false" aria-controls="faq2_desc">Як з нами зв'язатися?</button>
+  </dt>
+  <dd>
+    <div id="faq2_desc" class="desc">Перейдіть у вкладку <a href="contact.html">контакти</a>, та заповніть просту форму зв'язку. Після чого, ми обов'язково 
+        зв'яжемося з вами.
+    </div>
+  </dd>
+  <dt>
+    <button type="button" aria-expanded="false" aria-controls="faq3_desc">Як часто будуть поститись нові новини?</button>
+  </dt>
+  <dd>
+    <div id="faq3_desc" class="desc">
+        Новини виходять та будуть виходити з змогою, та з наявністю нового, цікавого матеріала для поста.
+    </div>
+  </dd>
+  <dt>
+    <button type="button" aria-expanded="false" aria-controls="faq4_desc">Хто створив цей блог?</button>
+  </dt>
+  <dd>
+    <div id="faq4_desc" class="desc">
+      Блог був створений Романом Матвійчуком :)
+    </div>
+  </dd>
+</dl>
+
+{%endblock%}
